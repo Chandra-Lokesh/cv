@@ -12,22 +12,32 @@
     <div class="logo">
         <h3>CL</h3>
     </div>
-    <div class="side-container">
-        <ul>
-            <div class="hover"><li><a href="#portfolio" class="portfolio active-a">Portfolio</a><hr class="portfolio active-a"></li></div>        
-            <div class="hover"><li><a href="#aboutme" class="aboutme">About me</a><hr class="aboutme"></li></div>
-            <div class="hover"><li><a href="#skills" class="skills">Skills</a><hr class="skills"></li></div>    
-        </ul>
+    <div class="bottom-container nav-container">
+        <div>
+            <div class="hover"><a href="#portfolio" class="portfolio active-a">Portfolio</a>    <hr class="portfolio active-a"></div>        
+            <div class="hover"><a href="#aboutme" class="aboutme">About me</a><hr class="aboutme"></div>
+            <div class="hover"><a href="#skills" class="skills">Skills</a><hr class="skills"></div>  
+            <div class="hover"><a href="#contactme" class="contactme">Contact me</a><hr class="contactme"></div> 
     </div>
+    </div>
+    <div class="side-container nav-container">
+        <div>
+            <div class="hover"><a href="#portfolio" class="portfolio active-a">Portfolio</a><hr class="portfolio active-a"></div>        
+            <div class="hover"><a href="#aboutme" class="aboutme">About me</a><hr class="aboutme"></div>
+            <div class="hover"><a href="#skills" class="skills">Skills</a><hr class="skills"></div>  
+            <div class="hover"><a href="#contactme" class="contactme">Contact me</a><hr class="contactme"></div> 
+        </div>
+    </div>
+    
     <div class="icons">
-        <a href="https://www.facebook.com/profile.php?id=100079308303864"><i class="fa fa-brands fa-facebook-f fa-lg"></i></a>
-        <a href="https://www.linkedin.com/in/girimapuram-chandra-lokesh-56362022a"><i class="fa fa-brands fa-linkedin fa-lg"></i></a>
-        <a href="https://www.instagram.com/chandra_lokesh_g/"><i class="fa fa-brands fa-instagram fa-lg"></i></a>
+        <a href="#"><i class="fa fa-brands fa-facebook-f fa-lg"></i></a>
+        <a href="#"><i class="fa fa-brands fa-linkedin fa-lg"></i></a>
+        <a href="#"><i class="fa fa-brands fa-instagram fa-lg"></i></a>
     </div>
-    <div class="main">
+    <div class="main"   >
         <section id="portfolio">
                 <div>
-                    <h1>Hola!</h1>
+                    <h1>Hello!</h1>
                     <h3>I am Chandra Lokesh.</h3>
                     <p>- A Web Developer.</p>
                 </div>
@@ -48,20 +58,47 @@
         </section>
         <section id="skills">
                 <div>
-                    <h3>Front-End Web Development</h3>
+                    <h3>- Front-End Web Development</h3>
                     <ul>
-                        <li>HTML (expert)</li>
-                        
-                        <li>CSS (expert)</li>
-                        <li>Javascript (intermediate)</li>
-                        <li>Bootstrap (expert)</li>
-                        <li>JQuery (intermediate)</li>
-                        <li>Nodejs (beginner)</li>
-                        <li>Expressjs (beginner)</li>
-                        <li>PHP (intermediate)</li>
+                        <li>&nbsp;&nbsp;&nbsp;HTML (Expert)</li>
+                        <li>&nbsp;&nbsp;&nbsp;CSS (Expert)</li>
+                        <li>&nbsp;&nbsp;&nbsp;Bootstrap (Expert)</li>
+                        <li>&nbsp;&nbsp;&nbsp;PHP (Intermediate)</li>
+                        <li>&nbsp;&nbsp;&nbsp;Javascript (Intermediate)</li>
+                        <li>&nbsp;&nbsp;&nbsp;WordPress (Intermediate)</li>
+                        <li>&nbsp;&nbsp;&nbsp;JQuery (Beginner)</li>
+                        <li>&nbsp;&nbsp;&nbsp;Nodejs (Beginner)</li>
                     </ul>
                     <br>
-                    <h3>WordPress</h3>
+                    <h3>- Programming Languages</h3>
+                    <ul>
+                        <li>&nbsp;&nbsp;&nbsp;Java</li>
+                        <li>&nbsp;&nbsp;&nbsp;Python</li>
+                        <li>&nbsp;&nbsp;&nbsp;C</li>
+                    </ul>
+                </div>
+        </section>
+        <section id="contactme">
+                <div>
+                    <form action="main.php" method="post">
+                        <table>
+                            <tr>
+                                <td>Name:</td>
+                                <td><input type="text" name="name"> <br></td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td><input type="email" name="email"> <br></td>
+                            </tr>
+                            <tr>
+                                <td>Your Message:</td>
+                                <td><textarea class="message" name="message" id="" cols="21" rows="8"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="button"><input type="submit" name="submit" value="Send" class="submit"></td>
+                            </tr>
+                        </table>
+                    </form>
                 </div>
         </section>
     </div>

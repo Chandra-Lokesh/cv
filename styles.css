@@ -5,12 +5,12 @@
     scroll-behavior: smooth;
     font-size: 18px;
 }
-video,img{
+img{
     width: 100%;
     position: fixed;
     left: 0;
-    top:0;
-    z-index: -2;
+    z-index: -1;
+    height: 100vh;
 }
 body {
     margin-left: 12rem;
@@ -31,12 +31,13 @@ section {
     left: 4.3rem;
     z-index: 1;
     transition: 700ms;
-    border: 2px solid white;
+    border: 2px solid #F0A500;
     border-radius: 4px;
     padding:.3rem .7rem;
 }
 .logo h3{
     font-size: 1.5rem;
+    color: white;
 }
 .logo:hover {
     transition: 500ms;
@@ -51,18 +52,18 @@ section {
 .side-container{
     height: 100vh;
     width: 12rem;
-    padding-top: 7rem;
     position: fixed;
     left:0;
     top: 0;
     display: flex;
-    align-items:flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content:center;
 }
 ul {
     list-style-type: none;
 }
-.side-container li {
+.side-container div div {
     margin: 1.8rem 0 .3rem;
 }
 hr {
@@ -81,37 +82,67 @@ a {
     font-size: 1.2rem;
 }
 .hover:hover hr{
-    transition: 700ms;
+    transition: 500ms;
     padding-right: 2rem;
     transition-timing-function: ease-in-out;
     background-color: #F0A500;
 }
 .hover:hover a{
-    transition: 700ms;
+    transition: 500ms;
+    color: gray;
     font-weight: bold;
     font-size: 1.3rem;
     color: white;
 }
 .active-a{
-    transition: 700ms;
+    transition: 500ms;
     color: white;
     font-weight: bold;
     font-size: 1.3rem;
 }
 .active-hr{
-    transition: 700ms;
+    transition: 500ms;
     padding-right: 2rem;
     transition-timing-function: ease-in-out;
     background-color: #F0A500;
 }
 
+/* BOTTOM CONTAINER */
+
+.bottom-container{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin-bottom: .4rem;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    display: none;
+}
+.bottom-container div div{
+    display: block;
+}
+.bottom-container div {
+    background-color: rgb(0, 0, 0, .7);
+    padding: .3rem 0;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1.8rem;
+}
+
 /* MAIN CONTAINER */
 
 .main {
-    padding-left: 6%;
+    /* padding-left: 6%; */
+    margin: auto;
     display: flex;
     align-items: baseline;
     flex-direction: column;
+}
+#portfolio, #aboutme, #skills, #contactme {
+    margin: auto;
 }
 .icons {
     display: flex;
@@ -126,7 +157,7 @@ a {
 .icons i {
     margin:0 1rem;
     transition: 500ms;
-    color: white;
+    color: #F0A500;
 }
 .icons i:hover {
     transition: 500ms;
@@ -137,6 +168,9 @@ a {
 
 /* PORTFOLIO */
 
+#portfolio{
+    width: 45%;
+}
 #portfolio h1{
     margin-bottom: .7rem;
     font-size: 8rem;
@@ -145,6 +179,9 @@ a {
     margin-bottom: .5rem;
     font-size: 30px;
 }
+#portfolio p{
+    color: #F0A500;
+}
 /* ABOUT ME */
 
 #aboutme {
@@ -152,6 +189,7 @@ a {
 }
 #aboutme p {
     line-height: 1.3rem;
+    color: #F0A500;
 }
 #aboutme ul {
     list-style-type: circle;
@@ -175,6 +213,7 @@ a {
 #skills h3 {
     margin-bottom: .5rem;
     font-size: 30px;
+    color: #F0A500;
 }
 
 /* CONTACT ME */
@@ -193,25 +232,33 @@ td {
     padding: .3rem;
 }
 input,textarea {
+    width: 100%;
     padding: .3rem;
     border: none;
     border-radius: .4rem;
     background-color: rgba(0, 0, 0, 0.448);
-    color: white;
+    color: black;
     font-size: .8rem;
     border: 1px solid white;
 }
 .button{
     text-align: center;
 }
+.button input{
+    margin-left: 1rem;
+    height: 2rem;
+    width: 7rem;
+}
 .submit {
+    font-family: 'Inconsolata', monospace;
     transition: 500ms;
-    background-color: #BB9981;
+    background-color: #F0A500;
 }
 .submit:hover {
     transition: 500ms;
     transform: scale(1.1);
     background-color: #F0A500;
+    box-shadow: 3px 3px white;
 }
 .submit {
     width: 4rem;
@@ -221,3 +268,88 @@ input,textarea {
     font-family: 'Inconsolata', monospace;
 }
 
+@media screen and (max-width:1024px) {
+    body{
+        margin: 0;
+    }
+    #portfolio, #aboutme, #skills, #contactme {
+        width: 100%;
+    }
+    #portfolio div {
+        margin: auto;
+    }
+    #aboutme div {
+        width: 70%;
+        display: inline;
+        margin: auto;
+    }
+    #skills div,#contactme div {
+        display: inline;
+        margin: auto;
+    }
+    .side-container{
+        display: none;
+    }
+    .bottom-container {
+        display: block;
+    }
+}
+@media screen and (max-width:425px){
+    *{
+        font-size: 30px;
+    }
+    /* LOGO */
+    .logo {
+        border-radius: 10px;
+        position: absolute;
+    }
+    .logo h3{
+        font-size: 2.5rem;
+        color: red;
+    }
+    /* PORTFOLIO */
+    #portfolio h3{
+        font-size: 2rem;
+    }
+    #portfolio p{
+        font-size: 1.5rem;
+    }
+    /* ABOUTME */
+    #aboutme div{
+        width: 80%;
+    }
+    #aboutme div ul li,#aboutme div p b{
+        font-size: 1.5rem;
+    }
+    #aboutme div p{
+        font-size: 1rem;
+    }
+    /* SKILLS */
+    #skills div ul li{
+        font-size: 1.5rem;
+    }
+    #skills div h3{
+        font-size: 2rem;
+    }
+    /* CONTACTME */
+    #contactme td {
+        font-size: 1.5rem;
+    }
+    #contactme td input{
+        border-radius: 5px;
+        width: 100%;
+        height: 1.5rem;
+    }
+    #contactme td textarea{
+        width: 100%;
+    }
+    #contactme div{
+        width: 80%;
+    }
+    #contactme .button input{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        height: 3rem;
+        width: 40%;
+    }
+}

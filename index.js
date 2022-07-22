@@ -1,6 +1,8 @@
 const sectiontag=document.querySelectorAll("section");
-const anchortag=document.querySelectorAll(".side-container ul div li a");
-const hrtag=document.querySelectorAll(".side-container ul div li hr");
+// const anchortag=document.querySelectorAll(".side-container ul div li a");
+// const hrtag=document.querySelectorAll(".side-container ul div li hr");
+const anchortag=document.querySelectorAll(".nav-container div div a");
+const hrtag=document.querySelectorAll(".nav-container div div hr");
 window.addEventListener("scroll",()=>{
     var cur="";
     sectiontag.forEach(section=>{
